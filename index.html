@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenora Bright-Okocha</title>
+    <!-- favicon -->
+    <link rel="icon" href=".\images\z-website-favicon-black.png" />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Aladin&family=Aldrich&family=Annie+Use+Your+Telescope&family=Arya&family=Berkshire+Swash&family=Caveat&family=Cherry+Swash&family=Dancing+Script&family=Henny+Penny&family=Lobster&family=Merienda&family=Merriweather&family=Pacifico&family=Rancho&family=Roboto+Slab:wght@100&family=Sacramento&family=Supermercado+One&family=Trade+Winds&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #bfd7ed;
+      }
+
+      /* NAVBAR AREA */
+      .brand-name {
+        color: #055c9d;
+        font-family: "Berkshire Swash", cursive;
+      }
+      .navbarlinks {
+        color: #194e81;
+      }
+
+      a.navbarlinks:hover {
+        color: #194e81;
+        border: 5px solid;
+        border-radius: 10px;
+        background-color: #ccd7e3;
+      }
+      .drop-down-menu {
+        background-color: #bfd7ed;
+      }
+
+      /* HOME PAGE CONTAINER */
+      h1 {
+        color: #003b73;
+        font-family: "Berkshire Swash", cursive;
+      }
+      h2 {
+        color: #003b73;
+        font-family: "Pacifico", cursive;
+      }
+      @media (max-width: 480px) {
+        .butterfly {
+          height: 5rem;
+          width: 5rem;
+        }
+        .main-butterfly {
+          height: 200px;
+          width: 15rem;
+          margin-top: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- navbar brand -->
+        <a class="navbar-brand" href="">
+          <img
+            src=".\images\z-website-favicon-black.png"
+            alt="Zechay's Logo"
+            width="45"
+            height="45"
+            class="d-inline-block"
+          />
+          <span class="brand-name align-text-top">Zechay</span>
+        </a>
+        <!--navbar toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-link-list"
+          aria-controls="navbar-link-list"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbar-link-list"
+        >
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link navbarlinks" href=".\about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbarlinks" href=".\blog.html">Blog</a>
+            </li>
+            <!-- dropdown link -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle navbarlinks"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Services</a
+              >
+              <ul class="dropdown-menu drop-down-menu">
+                <li>
+                  <a class="dropdown-item navbarlinks" href="#"
+                    >Artistic Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item navbarlinks" href="#"
+                    >Fashion Design Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item navbarlinks" href="#"
+                    >Health Related Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item navbarlinks" href="#"
+                    >Information & Technological Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbarlinks" href=".\contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ROW CONTAINING BUTTERFLIES AND NAME -->
+    <div
+      class="d-flex flex-row justify-content-center align-items-center text-center"
+    >
+      <div>
+        <img
+          src=".\images\left-butterfly.png"
+          alt=""
+          height="150rem"
+          class="butterfly"
+        />
+      </div>
+      <div>
+        <h1>
+          I'm <br />
+          Bright-Okocha Chimziichne Lenora
+        </h1>
+      </div>
+      <div>
+        <img
+          src=".\images\right-butterfly.png"
+          alt=""
+          height="150rem"
+          class="butterfly"
+        />
+      </div>
+    </div>
+    <!-- ROW CONTAINING PROFESSION -->
+    <div
+      class="d-flex flex-row justify-content-center align-items-center text-center mb-3"
+    >
+      <div>
+        <h2 class="">
+          a Programmer, Fashion Designer <br />
+          and Human Physiologist
+        </h2>
+      </div>
+    </div>
+    <!-- ROW CONTAINING MAIN BUTTERFLY -->
+    <div
+      class="d-flex flex-row justify-content-center align-items-center text-center"
+    >
+      <div>
+        <img
+          src=".\images\main-butterfly.png"
+          alt="main butterfly"
+          class="main-butterfly d-inline-flex"
+          height="350px"
+          width="500rem"
+        />
+      </div>
+    </div>
+  </body>
+</html>

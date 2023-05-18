@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenora's Blog</title>
+    <!-- favicon -->
+    <link rel="icon" href=".\images\z-website-favicon-black.png" />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Aladin&family=Aldrich&family=Annie+Use+Your+Telescope&family=Arya&family=Berkshire+Swash&family=Caveat&family=Cherry+Swash&family=Dancing+Script&family=Henny+Penny&family=Lobster&family=Merienda&family=Merriweather&family=Pacifico&family=Rancho&family=Roboto+Slab:wght@100&family=Sacramento&family=Supermercado+One&family=Trade+Winds&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #e5ebf1;
+        display: block;
+        font-family: "Cherry Swash", cursive;
+        color: #001d39;
+      }
+
+      h2 {
+        color: #003567;
+        font-family: "Pacifico", cursive;
+      }
+
+      h3 {
+        color: #003b73;
+      }
+
+      /* HEADER AND NAVBAR */
+      /* HEADER AND NAVBAR */
+      /* HEADER AND NAVBAR */
+      .blog-header-nav {
+        /* class name for the header nav */
+        background-color: #ccd7e3;
+        display: block;
+      }
+
+      .blog-name {
+        color: #002f5c;
+        font-family: "Berkshire Swash", cursive;
+      }
+
+      .nav-tabs {
+        background-color: #e5ebf1;
+        border-radius: 20px;
+        border: 5px solid #002f5c;
+      }
+      .navtablink {
+        /* this targets the the links on the nav-tab */
+        color: #194e81;
+      }
+      a.navtablink:hover {
+        color: #194e81;
+        border: 10px solid;
+        background-color: #ccd7e3;
+      }
+
+      .drop-down-menu {
+        background-color: #e5ebf1;
+        border-radius: 20px;
+      }
+      .dropdown-list {
+        color: #194e81;
+      }
+      a.dropdown-list:hover {
+        color: #194e81;
+        border: 3px solid #002f5c;
+        background-color: #ccd7e3;
+      }
+
+      .navbarlinks {
+        /* for each link 'a' */
+        color: #194e81;
+      }
+
+      .navbarlinks:hover {
+        background-color: #e5ebf1;
+        border-radius: 10px;
+        border: 3px solid #002f5c;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+        /* overflow-y property affects the overflow of content vertically (asin up to down)....... Hidden means The overflow is clipped, and the rest of the content will be invisible........The overflow property only works for block elements with a specified height*/
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        /* overflow-x property affects the overflow of content horizontally (asin left to right) */
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* BLOG POSTS */
+      /* BLOG POSTS */
+      /* BLOG POSTS */
+      .first-post {
+        background-image: url("./images/still-in-love-or-what.jpg");
+        background-size: 100%;
+      }
+
+      .continue-reading:hover {
+        background-color: #002f5c;
+        padding: 5px 10px;
+      }
+
+      @media (max-width: 480px) {
+        .first-post {
+          background-size: 100% 100%;
+        }
+      }
+
+      .featured-post {
+        box-shadow: 10px 10px 5px #002f5c;
+      }
+
+      .life-style {
+        color: #733800;
+      }
+
+      .article {
+        border-bottom: 5px solid #002f5c;
+      }
+
+      .page-nav {
+        background-color: #e5ebf1;
+      }
+
+      .page-nav-link {
+        color: #194e81;
+      }
+
+      .page-link.active {
+        background-color: #194e81;
+      }
+
+      a.page-nav-link:hover {
+        color: #194e81;
+        border: 5px solid;
+        background-color: #ccd7e3;
+      }
+
+      .footer-div {
+        background-color: #ccd7e3;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container blog-header-nav rounded-4 pt-1">
+      <header class="blog-header">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-1 pt-1">
+            <a class="navbar-brand" href="">
+              <img
+                src=".\images\z-website-favicon-black.png"
+                alt="Zechay's Logo"
+                width="45"
+                height="45"
+                class="d-inline-block"
+              />
+            </a>
+          </div>
+          <div class="col-6 justify-content-end text-center">
+            <span class="blog-name display-1">Lenora's Blog</span>
+          </div>
+          <div class="col-5 d-flex justify-content-end align-items-center">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a
+                  class="nav-link navtablink"
+                  aria-current="page"
+                  href=".\index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navtablink" href=".\about.html">About</a>
+              </li>
+              <!-- dropdown link -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle navtablink"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >Services</a
+                >
+                <ul class="dropdown-menu drop-down-menu">
+                  <li>
+                    <a class="dropdown-item dropdown-list" href="#"
+                      >Artistic Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item dropdown-list" href="#"
+                      >Fashion Design Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item dropdown-list" href="#"
+                      >Health Related Services</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item dropdown-list" href="#"
+                      >Information & Technological Services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navtablink" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 navbarlinks" href="#">Vent</a>
+          <a class="p-2 navbarlinks" href="#">Health</a>
+          <a class="p-2 navbarlinks" href="#">Fashion</a>
+          <a class="p-2 navbarlinks" href="#">Life-Style</a>
+          <a class="p-2 navbarlinks" href="#">Christ-Life</a>
+          <a class="p-2 navbarlinks" href="#">Relationships</a>
+          <a class="p-2 navbarlinks" href="#">Technology</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- main contains all the blog posts -->
+    <main class="container">
+      <div class="first-post p-4 p-md-5 mb-4 rounded-3 text-white">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Still in Love or What</h1>
+          <p class="lead my-3">
+            When asked, those who are in love occasionally reply,
+            <span class="fst-italic">"I was swept off my feet."</span> If you
+            envision the expression, it implies that something happened to you
+            when you were simply standing still and doing nothing.
+          </p>
+          <p class="lead mb-0">
+            <a href="#" class="continue-reading text-white fw-bold"
+              >Continue reading...</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- div containing the two featured posts -->
+      <div class="row mb-2">
+        <!-- first featured post div-->
+        <div class="col-md-6">
+          <div
+            class="featured-post row g-0 rounded-5 border overflow-hidden flex-md-row mb-4 h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <!--Note instead of adding a number to each col, let bootstrap handle the layout, to create equal width columns: two "col" elements = 50% width to each col. three cols = 33.33% width to each col. four cols = 25% width, etc -->
+              <strong class="life-style d-inline-block mb-2"
+                >#Life-Style</strong
+              >
+              <h3 class="mb-0">Time</h3>
+              <div class="mb-1 text-body-secondary">May 15th</div>
+              <p class="card-text mb-auto">
+                Some people have bigger aspirations and desires while yet having
+                the same amount of time... And they succeeded.
+              </p>
+              <a href="#" class="stretched-link navbarlinks"
+                >Continue reading...</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src=".\images\pexels-kindel-media-8172579.jpg"
+                alt=""
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- second featured post -->
+        <div class="col-md-6">
+          <div
+            class="featured-post row g-0 border rounded-5 overflow-hidden flex-md-row mb-4 h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <!--Note instead of adding a number to each col, let bootstrap handle the layout, to create equal width columns: two "col" elements = 50% width to each col. three cols = 33.33% width to each col. four cols = 25% width, etc -->
+              <strong class="d-inline-block mb-2 text-success"
+                >#Christ-Life</strong
+              >
+              <h3 class="mb-0">God is Good</h3>
+              <div class="mb-1 text-body-secondary">May 15</div>
+              <p class="card-text mb-auto">
+                What comes to mind when you hear the term "good"? What criteria
+                do you use to determine "Good"?
+              </p>
+              <a href="#" class="stretched-link navbarlinks"
+                >Continue reading...</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src=".\images\God-is-Good-Print.jpg"
+                alt=""
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- the remaining part of the main  -->
+      <div class="row g-5">
+        <div class="col-md-8">
+          <!-- 1st Article -->
+          <article class="article mb-5">
+            <h2 class="mb-1">Backsliding as a Believer</h2>
+            <p class="text-secondary mb-4">
+              february 18th, 2023 by
+              <a class="navbarlinks" href="https://youtu.be/P74cMaVo1To"
+                >Apostle Joshua Selman</a
+              >
+            </p>
+
+            <dl>
+              <dt>Blackslide:</dt>
+              <dd>
+                <code class="text-dark"
+                  >Condition caused by spiritual apathy or contempt for God's
+                  things, whether on the side of a person or a community bound
+                  by a past covenantal agreement to preserve the Lord's teaching
+                  and laws.</code
+                >
+              </dd>
+            </dl>
+
+            <p>
+              <span class="fst-italic"
+                >"When I was a youngster, I spoke, thought, and reasoned as a
+                child, When I became a man, I put the ways of childhood behind
+                me."</span
+              >
+              - 1 Corinthians 13:11 NIV. This teaches us that it is possible for
+              a Christian to transition from a kid to an adult even spiritually.
+            </p>
+            <br />
+            <p>
+              There are many believers who, due to the reality of the times we
+              live in, it appears that most people today view God as a necessary
+              luggage that they have to carry on their path to finding
+              fulfillment, on their path to becoming redeemed. Jesus was
+              teaching and he told us that tragedies always happen when men
+              sleep. He said that in a parable, that one came and planted wheat
+              and then while men were sleeping, he said that the enemy came and
+              also planted tares among the wheat.
+            </p>
+            <h3>Ephesians 5:14 KJV.</h3>
+            <blockquote class="blockquote">
+              <p>
+                <span class="fst-italic"
+                  >“Wherefore he saith, Awake thou that sleepest, and arise from
+                  the dead, and Christ shall give thee light.”</span
+                >
+              </p>
+            </blockquote>
+            <p>
+              Many people who began their relationship with God well later
+              discovered that they had neglected their relationship with God due
+              to their pursuit of other things—which may not have been evil—such
+              as education, family life, and other pursuits—until they now find
+              themselves in a state of spiritual tragedy. In the life of a
+              believer, it is possible to lose your fire, your vitality, and
+              your desire.
+            </p>
+            <h3>Vital Signs That Show Spiritual Retrogression</h3>
+            <p>
+              When you encounter any or all of these indicators in your
+              spiritual life, you should be aware that your spiritual life is in
+              danger;
+            </p>
+            <ol>
+              <li>A significant deviation from your love for the Lord</li>
+              <li>Self-centered living as against christ-centered living</li>
+              <li>
+                Consistent ever increasing compromise of your values and godly
+                standards
+              </li>
+              <li>Decline in your spiritual convictions</li>
+              <li>A decline in your passion for the house of God</li>
+            </ol>
+          </article>
+
+          <!-- pagination -->
+          <nav aria-label="Page">
+            <ul class="pagination page-nav p-3 justify-content-center">
+              <li class="page-item">
+                <a class="page-link page-nav-link active" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link page-nav-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link page-nav-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link page-nav-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- the sticky div area -->
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem">
+            <div class="p-4 mb-3 bg-body-tertiary rounded">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">
+                One look at Lenora's blog reveals that she is an advocate for
+                the Godly lifestyle, relationships the way God intended,
+                decency, especially when it comes to fashion, purposeful healthy
+                habits, life made easy technology, and the ability to vent in a
+                good and courteous manner. All of this while simultaneously
+                being educated and entertained.
+              </p>
+            </div>
+
+            <!-- archives -->
+            <div class="p-4">
+              <h4 class="fst-italic">Archives</h4>
+              <ol class="list-unstyled mb-0">
+                <li><a href="#" class="navbarlinks">May 2023</a></li>
+                <li><a href="#" class="navbarlinks">April 2023</a></li>
+                <li><a href="#" class="navbarlinks">March 2023</a></li>
+                <li><a href="#" class="navbarlinks">February 2023</a></li>
+                <li><a href="#" class="navbarlinks">January 2023</a></li>
+                <li><a href="#" class="navbarlinks">December 2022</a></li>
+                <li><a href="#" class="navbarlinks">November 2022</a></li>
+                <li><a href="#" class="navbarlinks">October 2022</a></li>
+                <li><a href="#" class="navbarlinks">September 2022</a></li>
+                <li><a href="#" class="navbarlinks">August 2022</a></li>
+                <li><a href="#" class="navbarlinks">July 2022</a></li>
+                <li><a href="#" class="navbarlinks">June 2022</a></li>
+                <li><a href="#" class="navbarlinks">May 2022</a></li>
+              </ol>
+            </div>
+
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+              <ol class="list-unstyled">
+                <li><a class="navbarlinks" href="#">GitHub</a></li>
+                <li><a class="navbarlinks" href="#">Wordpress</a></li>
+              </ol> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-div rounded-4 p-4 pb-0 text-center">
+      <!-- social media links  -->
+      <div class="d-flex flex-row flex-wrap justify-content-around mb-3">
+        <div class="p-2">
+          <a
+            class="navbarlinks p-3 text-decoration-none text-center"
+            href="mailto:chimziichne@gmail.com"
+            ><i class="bi bi-envelope-at-fill fs-3"></i> Email</a
+          >
+        </div>
+        <div class="p-2">
+          <a
+            class="navbarlinks p-3 text-decoration-none"
+            href="https://wa.me/08165341112"
+            ><i class="bi bi-whatsapp fs-3"></i> Whatsapp</a
+          >
+        </div>
+        <div class="p-2">
+          <a
+            class="navbarlinks p-3 text-decoration-none"
+            href="https://www.facebook.com/LenoraBrightOkocha"
+            ><i class="bi bi-facebook fs-3"></i> Facebook</a
+          >
+        </div>
+        <div class="p-2">
+          <a
+            class="navbarlinks p-3 text-decoration-none"
+            href="https://www.instagram.com/zechay"
+            ><i class="bi bi-instagram fs-3"></i> Instagram</a
+          >
+        </div>
+      </div>
+      <p class="pt-4 fw-bolder"><i class="bi bi-c-circle"></i> Bright-Okocha</p>
+    </footer>
+  </body>
+</html>
